@@ -5,8 +5,8 @@ import { Meteors } from "./ui/meteors";
 const Hero = () => {
     return (
         <div className='relative p-0.5'>
-            <div className="relative bg-gray-900 px-4 py-20 w-[50vw] h-full overflow-hidden rounded-2xl flex flex-col justify-center items-center">
-                <div style={{ width: '20vw', height: '20vw', position: 'relative', zIndex: 1, marginBottom: 20 }}>
+            <div className="relative px-4 py-20 w-[50vw] h-full overflow-hidden rounded-2xl flex flex-col justify-center items-center">
+                <div style={{ width: '200px', height: '200px', position: 'relative', zIndex: 1, marginBottom: 20 }}>
                     <Image src="/pfp_cropped.png" alt="Kenny's Hero Image" layout="fill" objectFit="cover" style={{ borderRadius: "50%" }} />
                 </div>
 
@@ -18,7 +18,7 @@ const Hero = () => {
                     <h2 className="font-bold text-base text-white mb-0">
                         Junior Software Engineer
                     </h2>
-                    <h2 className="font-normal text-base text-slate-500 text-center">
+                    <h2 className="font-normal text-base text-slate-400 text-center">
                         Northeastern Unversity 2024<br/>
                         Computer Engineering and Computer Science
                     </h2>
