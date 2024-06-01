@@ -5,9 +5,7 @@ import { Meteors } from "./ui/meteors";
 const Hero = () => {
     return (
         <div className="relative px-4 py-20 w-[50vw] h-full overflow-hidden rounded-2xl flex flex-col justify-center items-center">
-            <div style={{ width: '200px', height: '200px', position: 'relative', zIndex: 1, marginBottom: 20 }}>
-                <Image src="/pfp_cropped.png" alt="Kenny's Hero Image" layout="fill" objectFit="cover" style={{ borderRadius: "50%" }} />
-            </div>
+            <Image src="/pfp_cropped.png" alt="Kenny's Hero Image" width={200} height={200} style={{ borderRadius: "50%" }} />
 
             <h1 className="font-bold text-4xl text-white relative z-50 mb-2">
                 Kenny Lin
@@ -23,7 +21,6 @@ const Hero = () => {
                 </h2>
 
             </div>
-
             {/* Meaty part - Meteor effect */}
             <Meteors number={20} />
         </div>
