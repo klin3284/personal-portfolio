@@ -7,12 +7,12 @@ const Hero = () => {
         <div className="relative px-4 py-20 w-[50vw] h-full overflow-hidden rounded-2xl flex flex-col justify-center items-center">
             <Image src="/pfp_cropped.png" alt="Kenny's Hero Image" width={200} height={200} style={{ borderRadius: "50%" }} />
 
-            <h1 className="font-bold text-4xl text-white relative z-50 mb-2">
+            <h1 className="font-bold text-4xl relative z-50 mb-2">
                 Kenny Lin
             </h1>
 
             <div className="relative items-center flex flex-col">
-                <h2 className="font-bold text-base text-white mb-0">
+                <h2 className="font-bold text-base mb-0">
                     Junior Software Engineer
                 </h2>
                 <h2 className="font-normal text-base text-slate-400 text-center">
