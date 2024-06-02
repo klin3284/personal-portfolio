@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaGithub, FaLinkedin, FaFileAlt } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaFileAlt, FaClipboard } from 'react-icons/fa';
 import { GiBamboo } from "react-icons/gi";
 
 interface IconProps {
@@ -17,6 +17,8 @@ const Icon: React.FC<IconProps> = ({ name, size }) => {
             return <FaFileAlt size ={size}/>;
         case 'Bamboo':
             return <GiBamboo size ={size}/>;
+        case 'Clipboard':
+            return <FaClipboard size ={size}/>;
         default:
             return <div />;
     }

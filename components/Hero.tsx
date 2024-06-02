@@ -4,7 +4,7 @@ import { Meteors } from "./ui/meteors";
 
 const Hero = () => {
     return (
-        <div className="relative px-4 py-20 w-[50vw] h-full overflow-hidden rounded-2xl flex flex-col justify-center items-center">
+        <div className="relative px-4 py-20 w-full overflow-hidden rounded-2xl flex flex-col justify-center items-center">
             <Image src="/pfp_cropped.png" alt="Kenny's Hero Image" width={200} height={200} style={{ borderRadius: "50%" }} />
 
             <h1 className="font-bold text-4xl relative z-50 mb-2">
