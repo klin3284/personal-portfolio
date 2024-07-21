@@ -1,10 +1,11 @@
 import React from 'react'
 import Section from '../index'
+import Menu from './Menu'
 
 const Experiences = () => {
     return (
-        <Section id="experiences" title='Experiences'>
-            <p>Experiences content</p>
+        <Section id="experiences" title='Where I&apos;ve Worked'>
+            <Menu/>
         </Section>
     )
 }
