@@ -10,7 +10,7 @@ const SocialBar = () => {
             <a href="https://www.linkedin.com/in/kennylin24/" target="_blank" rel="noopener noreferrer" className="transition-colors duration-200 hover:text-purple-400">
                 <Icon name="LinkedIn" size={40} />
             </a>
-            <a href="" target="_blank" rel="noopener noreferrer" className="transition-colors duration-200 hover:text-purple-400">
+            <a href="/resume_lin_brk.pdf" download="Kenny_Lin_Resume.pdf" className="transition-colors duration-200 hover:text-purple-400">
                 <Icon name="Resume" size={40} />
             </a>
             <a href="" target="_blank" rel="noopener noreferrer" className="transition-colors duration-200 hover:text-purple-400">
@@ -20,4 +20,4 @@ const SocialBar = () => {
     )
 };
 
-export default SocialBar;
+export default SocialBar; 
