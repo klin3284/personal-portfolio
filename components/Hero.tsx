@@ -10,21 +10,21 @@ const Hero = () => {
         alt="Kenny's Hero Image"
         width={480}
         height={600}
-        style={{ borderRadius: "8%" }}
+        layout="intrinsic"
+        className="rounded-3xl"
       />
 
-      <div className="relative items-center flex flex-col ml-20 gap-2">
-        <h1 className="font-bold text-6xl relative mb-2">
-          Hi, I'm <span style={{ color: "lightblue" }}>Kenny Lin!</span>
+      <div className="flex flex-col items-center md:items-start mt-5 md:mt-0 md:ml-20 gap-2">
+        <h1 className="font-bold text-2xl md:text-6xl relative md:mb-2">
+          Hi, I&apos;m <span className="text-blue-400">Kenny Lin!</span>
         </h1>
-        <h2 className="font-bold text-base text-2xl">
+        <h2 className="font-bold text-md md:text-2xl">
           Junior Software Engineer
         </h2>
-        <h2 className="font-normal text-base text-slate-400 text-center text-xl">
-          I am a recent graduate from Northeastern with a <br />
-          Combined BS in Computer Engineering and Computer Science.
-        </h2>
-        <div className="mt-10">
+        <div className="w-64 md:min-w-full font-normal text-base md:text-xl text-slate-400 text-center md:text-left">
+          I&apos;m a recent graduate from Northeastern University with a Combined BS in Computer Engineering and Computer Science.
+        </div>
+        <div className="mt-5 md:mt-10">
           <SocialBar />
         </div>
       </div>
