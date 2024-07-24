@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaGithub, FaLinkedin, FaFileAlt, FaClipboard } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaFileAlt, FaClipboard, FaArrowUp } from 'react-icons/fa';
 import { SiExpress, SiJest, SiNextdotjs, SiSwift, SiC, SiCplusplus, SiPython, SiReact, SiMysql, SiPostgresql, SiJavascript, SiTypescript } from "react-icons/si";
 import { GiBamboo } from "react-icons/gi";
 
@@ -44,6 +44,8 @@ const Icon: React.FC<IconProps> = ({ name, size }) => {
             return <SiNextdotjs size={size} />;
         case 'Express':
             return <SiExpress size={size} />;
+        case 'UpArrow':
+            return <FaArrowUp size={size} />;
         default:
             return <div />;
     }

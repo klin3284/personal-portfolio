@@ -5,6 +5,7 @@ import About from "@components/sections/About";
 import Experiences from "@components/sections/Experiences";
 import Projects from "@components/sections/Projects";
 import Skills from "@components/sections/Skills";
+import ScrollToTopButton from '@components/ui/ScrollToTopButton';
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <Experiences />
       <Projects />
       <Contact />
+      <ScrollToTopButton />
     </main>
   );
 }
