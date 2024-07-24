@@ -1,6 +1,6 @@
 import React from 'react'
 import Section from '../index'
-import { InfiniteMovingIcons } from '@components/ui/infinite-moving-cards'
+import { InfiniteMovingIcons } from '@components/ui/InfiniteMovingIcons'
 
 const Skills = () => {
   const programmingLanguages = [
