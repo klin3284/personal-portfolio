@@ -12,7 +12,7 @@ export interface SectionHeaderProps {
 
 const Section: React.FC<SectionProps> = ({ id, title, children }) => {
     return (
-        <div className = "justify-center items-center px-6 py-10">
+        <div id={id} className="justify-center items-center px-6 py-10">
             {title && <SectionHeader>{title}</SectionHeader>}
             {children}
         </div>
