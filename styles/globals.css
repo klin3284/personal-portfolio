@@ -5,3 +5,111 @@
 body {
     @apply bg-gray-900 text-white;
 }
+
+.con-tooltip {
+    position: relative;
+    display: inline-block;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.tooltip {
+    visibility: hidden;
+    z-index: 1;
+    width: auto;
+    background: #333;
+    color: rgb(192, 132, 252);
+    box-shadow: 0 0 3px rgba(56, 54, 54, 0.86);
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: 600;
+    padding: 4px 14px;
+    border-radius: 10px;
+    font: 10px;
+    transition: opacity 0.1s ease-in-out, visibility 0s linear 0.1s;
+}
+
+.tooltip::after {
+    content: "";
+    position: absolute;
+    border-style: solid;
+    border-width: 8px;
+}
+
+.con-tooltip:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.1s ease-in-out, visibility 0s 0s;
+}
+
+
+.left:hover {
+    transform: translateX(-6px);
+}
+
+.top:hover {
+    transform: translateY(-6px);
+}
+
+.bottom:hover {
+    transform: translateY(6px);
+}
+
+.right:hover {
+    transform: translateX(6px);
+}
+
+.left .tooltip {
+    top: 50%;
+    right: calc(100% + 16px);
+    transform: translateY(-50%);
+}
+
+.left .tooltip::after {
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%);
+    border-color: transparent transparent transparent #333;
+}
+
+.top .tooltip {
+    bottom: calc(100% + 16px);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.top .tooltip::after {
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-color: #333 transparent transparent transparent;
+}
+
+.bottom .tooltip {
+    top: calc(100% + 16px);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.bottom .tooltip::after {
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-color: transparent transparent #333 transparent;
+}
+
+.right .tooltip {
+    top: 50%;
+    left: calc(100% + 16px);
+    transform: translateY(-50%);
+}
+
+.right .tooltip::after {
+    top: 50%;
+    right: 100%;
+    transform: translateY(-50%);
+    border-color: transparent #333 transparent transparent;
+}
