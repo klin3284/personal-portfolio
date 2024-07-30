@@ -1,3 +1,5 @@
+const { format } = require("path");
+
 module.exports = {
   plugins: ['prettier', 'import', 'react'],
   root: true,
@@ -31,6 +33,11 @@ module.exports = {
       {
         selector: 'variable',
         format: ['camelCase'],
+      },
+      {
+        selector: 'variable',
+        types: ['function'],
+        format: ['PascalCase', 'camelCase'],
       },
       {
         selector: 'typeLike',

@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import React, { useState, useEffect } from 'react';
-import Icon from '../icons';
+import React, { useState, useEffect } from "react";
+import Icon from "../icons";
 
 const ScrollToTopButton = () => {
   const [showTopBtn, setShowTopBtn] = useState(false);
@@ -15,17 +15,17 @@ const ScrollToTopButton = () => {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
   const goToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth',
+      behavior: "smooth",
     });
   };
 
