@@ -57,4 +57,12 @@ module.exports = {
       },
     ],
   },
+  overrides: [
+    {
+      files: ["app/api/**/*.{js,ts}"],
+      rules: {
+        "import/prefer-default-export": "off",
+      },
+    },
+  ],
 };

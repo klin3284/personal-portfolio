@@ -1,21 +1,64 @@
 "use client";
 
+import { contactSchema } from "@schemas/contact";
+import { z } from "zod";
 import React, { useState } from "react";
 import Section from "../index";
 import Icon from "../../icons/index";
 
 const ContactText = () => {
-  const email = process.env.NEXT_PUBLIC_PERSONAL_EMAIL_ADDRESS;
-  const [sender, setSender] = useState("");
-  const [message, setMessage] = useState("");
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
 
   const copyToClipboard = () => {
-    if (email) {
-      navigator.clipboard.writeText(email);
+    const emailAddress = process.env.PROFESSIONAL_EMAIL_ADDRESS ?? "";
+    if (emailAddress !== "") {
+      navigator.clipboard.writeText(emailAddress);
+      alert("Email copied to clipboard!");
     }
   };
 
-  // TODO: send email using Resend API
+  const handleSubmit = async (event: React.FormEvent) => {
+    event.preventDefault();
+    try {
+      contactSchema.parse(formData);
+      const response = await fetch("/api/email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+
+      setFormData({ name: "", email: "", message: "" });
+      alert("Email sent successfully!");
+    } catch (e) {
+      if (e instanceof z.ZodError) {
+        console.error("Validation errors:", e.errors);
+        // Handle validation errors
+      } else {
+        console.error("Submission error:", e);
+        // Handle other errors
+      }
+    }
+  };
 
   return (
     <div className="flex flex-col items-center">
@@ -25,14 +68,23 @@ const ContactText = () => {
           <textarea
             className="w-full h-12 border-2 border-gray-300 rounded-lg resize-none bg-gray-700 p-2 mb-4"
             placeholder="From"
-            value={sender}
-            onChange={(e) => setSender(e.target.value)}
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+          />
+          <textarea
+            className="w-full h-12 border-2 border-gray-300 rounded-lg resize-none bg-gray-700 p-2 mb-4"
+            placeholder="Email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
           />
           <textarea
             className="w-full h-32 border-2 border-gray-300 rounded-lg resize-none bg-gray-700 p-2 mb-4"
             placeholder="Enter your message here"
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
           />
         </div>
         <div className="flex flex-col items-center ml-4">
@@ -42,7 +94,10 @@ const ContactText = () => {
           >
             <Icon name="Clipboard" size={20} />
           </b>
-          <b className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+          <b
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            onClick={handleSubmit}
+          >
             Send
           </b>
         </div>
