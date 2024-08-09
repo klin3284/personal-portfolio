@@ -106,9 +106,13 @@ const Experiences = () => {
 
   return (
     <Section id="experience" title="Where I've Worked">
-      {jobs.map((job, index) => (
-        <ExperienceItem key={index} {...job} />
-      ))}
+      <div className="flex justify-center w-full mt-20">
+        <div className="flex flex-col items-start">
+          {jobs.map((job, index) => (
+            <ExperienceItem key={index} {...job} />
+          ))}
+        </div>
+      </div>
     </Section>
   );
 };

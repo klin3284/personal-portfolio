@@ -21,7 +21,7 @@ export const SectionHeader: React.FC<SectionHeaderProps> = ({
 );
 
 const Section: React.FC<SectionProps> = ({ id, title, children }) => (
-  <div id={id} className="justify-center items-center px-6 py-10">
+  <div id={id} className="justify-center items-center px-6 py-10 w-4/5">
     {title && <SectionHeader>{title}</SectionHeader>}
     {children}
   </div>
