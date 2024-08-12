@@ -3,113 +3,213 @@
 @tailwind utilities;
 
 body {
-    @apply bg-gray-900 text-white;
+  @apply bg-gray-900 text-white;
 }
 
 .con-tooltip {
-    position: relative;
-    display: inline-block;
-    transition: all 0.3s ease-in-out;
+  position: relative;
+  display: inline-block;
+  transition: all 0.3s ease-in-out;
 }
 
-
 .tooltip {
-    visibility: hidden;
-    z-index: 1;
-    width: auto;
-    background: #333;
-    color: rgb(192, 132, 252);
-    box-shadow: 0 0 3px rgba(56, 54, 54, 0.86);
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-weight: 600;
-    padding: 4px 14px;
-    border-radius: 10px;
-    font: 10px;
-    transition: opacity 0.1s ease-in-out, visibility 0s linear 0.1s;
+  visibility: hidden;
+  z-index: 1;
+  width: auto;
+  background: #333;
+  color: rgb(192, 132, 252);
+  box-shadow: 0 0 3px rgba(56, 54, 54, 0.86);
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: 600;
+  padding: 4px 14px;
+  border-radius: 10px;
+  font: 10px;
+  transition:
+    opacity 0.1s ease-in-out,
+    visibility 0s linear 0.1s;
 }
 
 .tooltip::after {
-    content: "";
-    position: absolute;
-    border-style: solid;
-    border-width: 8px;
+  content: "";
+  position: absolute;
+  border-style: solid;
+  border-width: 8px;
 }
 
 .con-tooltip:hover .tooltip {
-    visibility: visible;
-    opacity: 1;
-    transition: opacity 0.1s ease-in-out, visibility 0s 0s;
+  visibility: visible;
+  opacity: 1;
+  transition:
+    opacity 0.1s ease-in-out,
+    visibility 0s 0s;
 }
 
-
 .left:hover {
-    transform: translateX(-6px);
+  transform: translateX(-6px);
 }
 
 .top:hover {
-    transform: translateY(-6px);
+  transform: translateY(-6px);
 }
 
 .bottom:hover {
-    transform: translateY(6px);
+  transform: translateY(6px);
 }
 
 .right:hover {
-    transform: translateX(6px);
+  transform: translateX(6px);
 }
 
 .left .tooltip {
-    top: 50%;
-    right: calc(100% + 16px);
-    transform: translateY(-50%);
+  top: 50%;
+  right: calc(100% + 16px);
+  transform: translateY(-50%);
 }
 
 .left .tooltip::after {
-    top: 50%;
-    left: 100%;
-    transform: translateY(-50%);
-    border-color: transparent transparent transparent #333;
+  top: 50%;
+  left: 100%;
+  transform: translateY(-50%);
+  border-color: transparent transparent transparent #333;
 }
 
 .top .tooltip {
-    bottom: calc(100% + 16px);
-    left: 50%;
-    transform: translateX(-50%);
+  bottom: calc(100% + 16px);
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .top .tooltip::after {
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    border-color: #333 transparent transparent transparent;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-color: #333 transparent transparent transparent;
 }
 
 .bottom .tooltip {
-    top: calc(100% + 16px);
-    left: 50%;
-    transform: translateX(-50%);
+  top: calc(100% + 16px);
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .bottom .tooltip::after {
-    bottom: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    border-color: transparent transparent #333 transparent;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-color: transparent transparent #333 transparent;
 }
 
 .right .tooltip {
-    top: 50%;
-    left: calc(100% + 16px);
-    transform: translateY(-50%);
+  top: 50%;
+  left: calc(100% + 16px);
+  transform: translateY(-50%);
 }
 
 .right .tooltip::after {
-    top: 50%;
-    right: 100%;
-    transform: translateY(-50%);
-    border-color: transparent #333 transparent transparent;
+  top: 50%;
+  right: 100%;
+  transform: translateY(-50%);
+  border-color: transparent #333 transparent transparent;
+}
+
+.highlight-project-item {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 300px;
+  background-color: #333;
+}
+
+.highlight-project-item .card {
+  position: absolute;
+  top: -10%;
+  left: 0;
+  width: 40%;
+  height: 120%;
+  border-radius: 5%;
+  padding: 20px;
+  box-shadow: 6px 12px 12px hsl(0deg 0% 0% / 0.31);
+  background-color: #ddd;
+}
+
+.highlight-project-item .text-details {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  padding: 0 20px;
+}
+
+.highlight-project-item .textDetails::before {
+  content: "";
+  position: absolute;
+}
+
+.highlight-project-item:nth-child(odd) .card {
+  left: 3%;
+  right: auto;
+}
+
+.highlight-project-item:nth-child(even) .card {
+  right: 3%;
+  left: auto;
+}
+
+.highlight-project-item:nth-child(odd) .text-details {
+  margin-left: 43%;
+  margin-right: 0;
+}
+
+.highlight-project-item:nth-child(even) .text-details {
+  margin-left: 0;
+  margin-right: 43%;
+}
+
+.highlight-project-item .slide-left-arrow {
+  opacity: 0;
+  transition: opacity 0.5s;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  border-radius: 50%;
+}
+
+.highlight-project-item .slide-right-arrow {
+  opacity: 0;
+  transition: opacity 0.5s;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  border-radius: 50%;
+}
+
+.highlight-project-item .slide-dots {
+  opacity: 0;
+  transition: opacity 0.5s;
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  justify-content: center;
+  padding: 0.5rem;
+}
+
+.highlight-project-item:hover .slide-dots,
+.highlight-project-item:hover .slide-right-arrow,
+.highlight-project-item:hover .slide-left-arrow {
+  opacity: 1;
 }

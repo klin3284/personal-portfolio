@@ -1,5 +1,6 @@
 import React from "react";
 import Section from "../index";
+import CardSlide from "./cardSlide";
 
 const languageColorMap: { [key: string]: string } = {
   JavaScript: "#f0db4f",
@@ -25,6 +26,34 @@ interface ProjectItemProps {
   externalUrl?: string;
   language?: Language;
 }
+
+interface HighlightProjectItemProps {
+  title: string;
+  description: string;
+  imageUrl: string;
+}
+
+const HighlightProjectItem: React.FC<HighlightProjectItemProps> = ({
+  title,
+  description,
+  imageUrl,
+}) => (
+  <div className="highlight-project-item flex">
+    <div className="card">
+      <CardSlide
+        slides={["/aac_logo.png", "/mcphs_logo.png", "/avidyne_logo.png"]}
+      />
+    </div>
+    <div className="text-details">
+      <div>
+        <h1 className="font-bold text-blue-400 text-2xl md:text-4xl relative md:mb-4">
+          {title}
+        </h1>
+        <h2 className="font-bold text-md md:text-2xl">{description}</h2>
+      </div>
+    </div>
+  </div>
+);
 
 const ProjectItem: React.FC<ProjectItemProps> = ({
   title,
@@ -57,6 +86,27 @@ const ProjectItem: React.FC<ProjectItemProps> = ({
 );
 
 const Projects = () => {
+  const highlightItems = [
+    {
+      title: "Project 1",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+      imageUrl: "aac_logo.png",
+    },
+    {
+      title: "Project 2",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+      imageUrl: "aac_logo.png",
+    },
+    {
+      title: "Project 3",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
+      imageUrl: "aac_logo.png",
+    },
+  ];
+
   const projectItems = [
     {
       title: "CoveyTown News Outlet",
@@ -102,6 +152,12 @@ const Projects = () => {
   ];
   return (
     <Section id="projects" title="Work I'm Proud Of">
+      <div className="flex flex-col space-y-20 px-10 mt-20">
+        {highlightItems.map((project, index) => (
+          <HighlightProjectItem key={index} {...project} />
+        ))}
+      </div>
+
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-20">
         {projectItems.map((project, index) => (
           <ProjectItem key={index} {...project} />
