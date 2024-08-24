@@ -62,7 +62,6 @@ const ProjectItem: React.FC<ProjectItemProps> = ({
   language,
 }) => (
   <div className="group bg-transparent rounded-lg shadow-lg overflow-hidden border-2 border-transparent hover:border-blue-400 hover:scale-105 transition-transform duration-300">
-    {/* <img src={imageUrl} alt={title} className="w-full h-48 object-cover" /> */}
     <div className="flex flex-col justify-between h-full py-8 px-6">
       <div>
         <h3 className="text-xl font-bold mb-2 group-hover:text-blue-400">
@@ -152,13 +151,32 @@ const Projects = () => {
   ];
   return (
     <Section id="projects" title="Work I'm Proud Of">
-      <div className="flex flex-col space-y-20 px-10 mt-20">
+      <div className="flex flex-col gap-4 mt-20">
+        <header className="max-w-4xl">
+          <div>
+            <h1 className="text-4xl font-bold sm:text-5xl">
+              A Peek into My Software Engineering Adventures
+            </h1>
+            <p className="mt-6 text-gray-400">
+              Over the years, I've had the opportunity to work on a variety of
+              software projects. These are the ones that I'm most proud of
+              showcasing in my portfolio. Many of these projects are
+              open-source, so feel free to explore the code and contribute if
+              you have any ideas for enhancements or improvements.
+            </p>
+          </div>
+        </header>
+      </div>
+
+      <div className="flex flex-col space-y-20 mt-20">
         {highlightItems.map((project, index) => (
           <HighlightProjectItem key={index} {...project} />
         ))}
       </div>
-
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-20">
+      <h2 className="text-3xl font-semibold ml-6 mt-28">
+        List of Honorable Mentions on Github
+      </h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 my-6">
         {projectItems.map((project, index) => (
           <ProjectItem key={index} {...project} />
         ))}

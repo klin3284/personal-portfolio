@@ -38,10 +38,10 @@ const CardSlide: React.FC<CardSlideProps> = ({ slides }) => {
           objectFit="contain"
         />
       </div>
-      <div className="slide-left-arrow bg-purple-400 text-white">
+      <div className="slide-left-arrow bg-blue-400 text-white">
         <BsChevronCompactLeft onClick={prevSlide} size={20} />
       </div>
-      <div className="slide-right-arrow bg-purple-400 text-white">
+      <div className="slide-right-arrow bg-blue-400 text-white">
         <BsChevronCompactRight onClick={nextSlide} size={20} />
       </div>
       <div className="slide-dots">
@@ -49,7 +49,7 @@ const CardSlide: React.FC<CardSlideProps> = ({ slides }) => {
           <div
             key={slideIndex}
             onClick={() => goToSlide(slideIndex)}
-            className={`text-2xl ${slideIndex === currentIndex ? "text-purple-400" : "text-gray-500"}`}
+            className={`text-2xl ${slideIndex === currentIndex ? "text-blue-400" : "text-gray-500"}`}
           >
             <RxDotFilled />
           </div>
