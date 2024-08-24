@@ -5,11 +5,11 @@ import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
 import { RxDotFilled } from "react-icons/rx";
 import Image from "next/image";
 
-interface CardSlideProps {
+interface ImageGalleryProps {
   slides: string[];
 }
 
-const CardSlide: React.FC<CardSlideProps> = ({ slides }) => {
+const ImageGallery: React.FC<ImageGalleryProps> = ({ slides }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const prevSlide = () => {
@@ -59,4 +59,4 @@ const CardSlide: React.FC<CardSlideProps> = ({ slides }) => {
   );
 };
 
-export default CardSlide;
+export default ImageGallery;
