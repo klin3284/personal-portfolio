@@ -15,8 +15,6 @@ export const SectionHeader: React.FC<SectionHeaderProps> = ({
 }: SectionHeaderProps) => (
   <div className="flex items-center mb-8">
     <div className="border-t border-gray-300 flex-grow mr-3"></div>
-    <h2 className="text-xl font-bold text-center">{children}</h2>
-    <div className="border-t border-gray-300 flex-grow ml-3"></div>
   </div>
 );
 

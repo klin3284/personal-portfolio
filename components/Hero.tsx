@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import SocialBar from "@components/SocialBar";
+import SocialBar from "@components/socialBar";
 
 const Hero = () => (
   <div className="flex py-20 px-5 rounded-2xl items-center">

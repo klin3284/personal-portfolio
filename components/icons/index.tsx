@@ -21,6 +21,7 @@ import {
   SiTypescript,
 } from "react-icons/si";
 import { GiBamboo } from "react-icons/gi";
+import { IoBriefcaseOutline } from "react-icons/io5";
 
 interface IconProps {
   name: string;
@@ -65,6 +66,8 @@ const Icon: React.FC<IconProps> = ({ name, size }) => {
       return <SiExpress size={size} />;
     case "UpArrow":
       return <FaArrowUp size={size} />;
+    case "Briefcase":
+      return <IoBriefcaseOutline size={size} />;
     default:
       return <div />;
   }
