@@ -3,7 +3,6 @@
 import React, { useState } from "react";
 import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
 import { RxDotFilled } from "react-icons/rx";
-import Image from "next/image";
 
 interface ImageGalleryProps {
   slides: string[];
@@ -31,11 +30,10 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ slides }) => {
   return (
     <div className="h-full w-full px-12 relative group">
       <div className="relative w-full h-full">
-        <Image
+        <img
           src={slides[currentIndex]}
-          alt={`Spotlight-Img-${currentIndex}`}
-          layout="fill"
-          objectFit="contain"
+          alt={`Spotlight Image ${currentIndex}`}
+          className="object-contain items-center w-full h-full"
         />
       </div>
       <div className="slide-left-arrow bg-blue-400 text-white">

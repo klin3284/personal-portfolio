@@ -1,8 +1,8 @@
-import Contact from "@components/sections/Contact";
-import Hero from "@components/hero";
-import About from "@components/sections/About";
-import Projects from "@components/sections/Projects";
-import ScrollToTopButton from "@components/ui/ScrollToTopButton";
+import Contact from "@components/sections/contactMe";
+import Hero from "@/components/sections/hero";
+import About from "@components/sections/about";
+import Projects from "@components/sections/projects";
+import ScrollToTopButton from "@components/layout/scrollToTopButton";
 
 export default function Home() {
   return (

@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import ExperienceItem, { ExperienceItemProps } from "./ExperienceItem";
+import ExperienceItem, { ExperienceItemProps } from "./experienceItem";
 
 const Experiences = () => {
   const jobs: ExperienceItemProps[] = [

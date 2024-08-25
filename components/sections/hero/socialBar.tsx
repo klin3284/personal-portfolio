@@ -1,5 +1,5 @@
 import React from "react";
-import Icon from "./icons";
+import Icon from "@components/icons";
 
 const SocialBar = () => (
   <div className="grid grid-cols-4 gap-4">

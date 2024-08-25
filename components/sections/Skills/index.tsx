@@ -1,5 +1,5 @@
 import React from "react";
-import InfiniteMovingIcons from "@components/ui/InfiniteMovingIcons";
+import InfiniteMovingIcons from "@components/ui/infiniteMovingIcons";
 import Section from "../index";
 
 const Skills = () => {

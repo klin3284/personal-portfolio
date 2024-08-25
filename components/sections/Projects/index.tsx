@@ -2,8 +2,8 @@ import React from "react";
 import Section from "../index";
 import SpotlightProjectItem, {
   SpotlightProjectItemProps,
-} from "./SpotlightProjectItem";
-import ProjectItem, { ProjectItemProps } from "./ProjectItem";
+} from "./spotlightProjectItem";
+import ProjectItem, { ProjectItemProps } from "./projectItem";
 
 const Projects = () => {
   const spotlightProjectItems: SpotlightProjectItemProps[] = [

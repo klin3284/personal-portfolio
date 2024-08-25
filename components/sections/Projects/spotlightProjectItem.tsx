@@ -1,5 +1,5 @@
 import React from "react";
-import ImageGallery from "../ImageGallery";
+import ImageGallery from "./imageGallery";
 
 export interface SpotlightProjectItemProps {
   title: string;

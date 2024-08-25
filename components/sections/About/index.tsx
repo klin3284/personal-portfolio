@@ -1,9 +1,9 @@
 import React from "react";
 import Icon from "@components/icons";
 import Section from "../index";
-import Experiences from "../Experiences";
-import DetailsList from "./DetailsList";
-import Introduction from "./Introduction";
+import Experiences from "../experiences";
+import DetailsList from "./detailsList";
+import Introduction from "./introduction";
 
 const About = () => (
   <Section id="about" title="About Me">
@@ -12,7 +12,7 @@ const About = () => (
         <div className="max-w-xs px-5 lg:max-w-none ">
           <img
             src="pfp_cropped.png"
-            alt="Description of image"
+            alt="About Me Headshot"
             className="object-contain rounded-full border-2 border-blue-400"
           />
         </div>
