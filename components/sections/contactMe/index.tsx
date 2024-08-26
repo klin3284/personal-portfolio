@@ -27,7 +27,6 @@ const ContactText = () => {
     const emailAddress = process.env.PROFESSIONAL_EMAIL_ADDRESS ?? "";
     if (emailAddress !== "") {
       navigator.clipboard.writeText(emailAddress);
-      alert("Email copied to clipboard!");
     }
   };
 
@@ -46,15 +45,12 @@ const ContactText = () => {
       if (!response.ok) {
         throw new Error("Network response was not ok");
       }
-
+      // Sent Email Confirmation
       setFormData({ name: "", email: "", message: "" });
-      alert("Email sent successfully!");
     } catch (e) {
       if (e instanceof z.ZodError) {
-        console.error("Validation errors:", e.errors);
         // Handle validation errors
       } else {
-        console.error("Submission error:", e);
         // Handle other errors
       }
     }

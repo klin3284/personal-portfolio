@@ -9,6 +9,7 @@ module.exports = {
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
     "prettier",
+    "plugin:@next/next/recommended",
   ],
   parserOptions: {
     project: "./tsconfig.json",
@@ -17,6 +18,7 @@ module.exports = {
   },
   ignorePatterns: ["/*.*"],
   rules: {
+    "@next/next/no-img-element": "off",
     "prettier/prettier": "error",
     "no-underscore-dangle": 0,
     "no-param-reassign": 0,
