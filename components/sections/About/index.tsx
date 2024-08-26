@@ -1,5 +1,8 @@
+"use client";
+
 import React from "react";
 import Icon from "@components/icons";
+import ScrollToSectionButton from "@components/layout/scrollToSectionButton";
 import Section from "../index";
 import Experiences from "../experiences";
 import DetailsList from "./detailsList";
@@ -8,8 +11,8 @@ import Introduction from "./introduction";
 const About = () => (
   <Section id="about" title="About Me">
     <div className="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12 my-20">
-      <div className="lg:pl-20">
-        <div className="max-w-xs px-5 lg:max-w-none ">
+      <div className="lg:pl-20 text-center lg:text-left">
+        <div className="max-w-xs px-5 lg:max-w-none mx-auto lg:mx-0">
           <img
             src="pfp_cropped.png"
             alt="About Me Headshot"
@@ -30,7 +33,7 @@ const About = () => (
         <DetailsList />
       </div>
 
-      <div className="lg:pl-20 mt-8">
+      <div id="experiences" className="lg:pl-20 mt-8">
         <div className="flex flex-col items-start border-2 border-gray-600 rounded-2xl p-6">
           <div className="flex flex-row gap-4 items-center mb-2">
             <Icon name="Briefcase" size={28} />
@@ -38,9 +41,11 @@ const About = () => (
           </div>
           <Experiences />
           <div className="flex justify-center w-full mt-4">
-            <button className="bg-gray-700 text-white py-4 px-4 w-11/12 max-w-md rounded-lg">
-              Contact Me
-            </button>
+            <ScrollToSectionButton
+              sectionId="contactMe"
+              label="Contact Me"
+              className="bg-gray-700 text-white py-4 px-4 w-11/12 max-w-md rounded-lg"
+            />
           </div>
         </div>
       </div>

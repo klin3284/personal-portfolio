@@ -1,19 +1,15 @@
 import React from "react";
-import Image from "next/image";
 import SocialBar from "./socialBar";
 
 const Hero = () => (
-  <div className="flex py-20 px-5 rounded-2xl items-center">
-    <Image
+  <div className="flex flex-col md:flex-row py-10 md:py-20 px-5 rounded-2xl items-center justify-center gap-20">
+    <img
       src="/pfp.jpg"
       alt="Kenny's Hero Image"
-      width={480}
-      height={600}
-      layout="intrinsic"
-      className="rounded-3xl"
+      className="rounded-3xl md:max-w-xl"
     />
 
-    <div className="flex flex-col items-center md:items-start mt-5 md:mt-0 md:ml-20 gap-2">
+    <div className="flex flex-col items-center md:items-start gap-2">
       <h1 className="font-bold text-2xl md:text-6xl relative md:mb-2">
         Hi, I&apos;m <span className="text-blue-400">Kenny Lin!</span>
       </h1>

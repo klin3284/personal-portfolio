@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import ScrollToSectionButton from "./scrollToSectionButton";
 
 const Navbar = () => {
   const [showNav, setShowNav] = useState(true);
@@ -20,34 +21,23 @@ const Navbar = () => {
     };
   }, [scrollPos]);
 
-  const scrollToSection = (sectionId: string) => {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
-  };
-
   return (
     <nav
       className={`fixed w-full z-10 backdrop-blur-md transition-all duration-500 ease-in-out transform ${showNav ? "translate-y-0" : "-translate-y-full"} ${scrollPos > 0 ? "shadow-xl" : ""}`}
     >
-      <div className="py-7 px-10 opacity-80 bg-gray-900 w-full">
-        <ul className="flex justify-end space-x-5 md:gap-[8]">
+      <div className="py-4 md:py-6 px-10 md:px-20 opacity-80 bg-gray-900 w-full">
+        <ul className="flex justify-end gap-4 md:gap-8 text-sm md:text-base">
           <li>
-            <button onClick={() => scrollToSection("about")}>About</button>
+            <ScrollToSectionButton sectionId="about" label="About" />
           </li>
           <li>
-            <button onClick={() => scrollToSection("skills")}>Skills</button>
+            <ScrollToSectionButton sectionId="experiences" label="Experience" />
           </li>
           <li>
-            <button onClick={() => scrollToSection("experience")}>
-              Experience
-            </button>
+            <ScrollToSectionButton sectionId="projects" label="Projects" />
           </li>
           <li>
-            <button onClick={() => scrollToSection("projects")}>
-              Projects
-            </button>
+            <ScrollToSectionButton sectionId="contactMe" label="Contact" />
           </li>
         </ul>
       </div>

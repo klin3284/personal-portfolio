@@ -61,7 +61,7 @@ const ContactText = () => {
   };
 
   return (
-    <div className="flex flex-col items-center">
+    <div id="contactMe" className="flex flex-col items-center">
       <h2 className="font-bold text-xl mb-4">Get in touch with me!</h2>
       <div className="flex justify-between w-full md:w-3/4 lg:w-1/2 xl:w-3/4">
         <div className="w-full flex-col items-center">
