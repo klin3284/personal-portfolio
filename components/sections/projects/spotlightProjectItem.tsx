@@ -12,7 +12,7 @@ const SpotlightProjectItem: React.FC<SpotlightProjectItemProps> = ({
   description,
   imageUrl,
 }) => (
-  <div className="highlight-project-item flex">
+  <div className="highlight-project-item flex items-center">
     <div className="card">
       <ImageGallery
         slides={["/aac_logo.png", "/mcphs_logo.png", "/avidyne_logo.png"]}
@@ -20,10 +20,10 @@ const SpotlightProjectItem: React.FC<SpotlightProjectItemProps> = ({
     </div>
     <div className="text-details">
       <div>
-        <h1 className="font-bold text-blue-400 text-2xl md:text-4xl relative md:mb-4">
+        <h1 className="font-bold text-blue-400 text-3xl md:text-4xl relative mb-2 lg:mb-4">
           {title}
         </h1>
-        <h2 className="font-bold text-md md:text-2xl">{description}</h2>
+        <h2 className="font-bold text-lg md:text-2xl">{description}</h2>
       </div>
     </div>
   </div>

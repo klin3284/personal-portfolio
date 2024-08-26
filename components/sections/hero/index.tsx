@@ -2,7 +2,7 @@ import React from "react";
 import SocialBar from "./socialBar";
 
 const Hero = () => (
-  <div className="flex flex-col md:flex-row py-10 md:py-20 px-5 rounded-2xl items-center justify-center gap-20">
+  <div className="flex flex-col lg:flex-row py-10 md:py-20 px-5 rounded-2xl items-center justify-center gap-20">
     <img
       src="/pfp.jpg"
       alt="Kenny's Hero Image"

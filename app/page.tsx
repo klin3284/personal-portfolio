@@ -6,7 +6,7 @@ import ScrollToTopButton from "@components/layout/scrollToTopButton";
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center justify-center pt-12 px-8 md:px-0">
+    <main className="flex flex-col items-center justify-center pt-12 px-12 lg:px-0">
       <Hero />
       <About />
       <Projects />
