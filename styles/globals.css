@@ -121,10 +121,11 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 50rem;
   width: 100%;
-  height: 400px;
+  height: 450px;
   background-color: #333;
-} 
+}
 
 .highlight-project-item .text-details {
   position: relative;
@@ -135,62 +136,37 @@ body {
   position: relative;
   top: -5%;
   width: 92.5%;
-  height: 55%;
   margin-left: auto;
   margin-right: auto;
   background-color: #ddd;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 1.25rem;
+  aspect-ratio: 5 / 2.5;
+  overflow: hidden;
 }
 
 @media (min-width: 768px) {
   .highlight-project-item {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    height: 500px;
-    background-color: #333;
-  }
-
-  .highlight-project-item .text-details {
-    position: relative;
-    padding: 0 25px;
-  }
-
-  .highlight-project-item .card {
-    position: relative;
-    top: -5%;
-    width: 92.5%;
-    height: 55%;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #ddd;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 1.25rem;
+    height: 550px;
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1280px) {
   .highlight-project-item {
-    position: relative;
-    display: flex;
     width: 100%;
     height: 300px;
-    background-color: #333;
+    max-width: none;
   }
 
   .highlight-project-item .card {
     position: absolute;
     top: -10%;
     left: 0;
-    width: 40%;
+    width: 30rem;
     height: 120%;
     border-radius: 5%;
     padding: 20px;
-    box-shadow: 6px 12px 12px hsl(0deg 0% 0% / 0.31);
-    background-color: #ddd;
+    aspect-ratio: none;
   }
 
   .highlight-project-item .text-details {

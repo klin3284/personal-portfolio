@@ -90,7 +90,7 @@ const Projects = () => {
         </header>
       </div>
 
-      <div className="flex flex-col space-y-20 mt-20">
+      <div className="flex flex-col items-center space-y-20 mt-20">
         {spotlightProjectItems.map((project, index) => (
           <SpotlightProjectItem key={index} {...project} />
         ))}
