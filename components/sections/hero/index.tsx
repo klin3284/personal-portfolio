@@ -20,8 +20,8 @@ const Hero = () => (
         I&apos;m a recent graduate from Northeastern University with a Combined
         BS in Computer Engineering and Computer Science.
       </div>
-      <div className="mt-5 md:mt-10">
-        <SocialBar />
+      <div className="mt-5 md:mt-8">
+        <SocialBar size={40} />
       </div>
     </div>
   </div>
