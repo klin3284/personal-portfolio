@@ -22,6 +22,7 @@ import {
 } from "react-icons/si";
 import { GiBamboo } from "react-icons/gi";
 import { IoBriefcaseOutline } from "react-icons/io5";
+import { MdMailOutline } from "react-icons/md";
 
 interface IconProps {
   name: string;
@@ -30,6 +31,8 @@ interface IconProps {
 
 const Icon: React.FC<IconProps> = ({ name, size }) => {
   switch (name) {
+    case "Mail":
+      return <MdMailOutline size={size} />;
     case "GitHub":
       return <FaGithub size={size} />;
     case "LinkedIn":
