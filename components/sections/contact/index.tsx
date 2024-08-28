@@ -2,7 +2,7 @@
 
 import { contactSchema } from "@schemas/contact";
 import { z } from "zod";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import TextField from "@mui/material/TextField";
 import { ThemeProvider } from "@mui/material/styles";
 import theme from "@styles/themeProvider";
@@ -21,11 +21,9 @@ const Contact = () => {
     email: false,
     message: false,
   });
-  const btn = document.querySelector("#btn");
-  const btnText = document.querySelector("#btnText");
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const { id, value } = e.target;
     setFormData((prevData) => ({
@@ -37,11 +35,15 @@ const Contact = () => {
       [id]: false,
     }));
 
-    if (!btn || !btnText) {
-      return;
+    if (typeof document !== "undefined") {
+      const btn = document.querySelector("#btn");
+      const btnText = document.querySelector("#btnText");
+      if (!btn || !btnText) {
+        return;
+      }
+      btnText.innerHTML = "Submit";
+      btn.classList.remove("active");
     }
-    btnText.innerHTML = "Submit";
-    btn.classList.remove("active");
   };
 
   const handleSubmit = async (event: React.FormEvent) => {
@@ -61,12 +63,15 @@ const Contact = () => {
       }
       setFormData({ name: "", email: "", message: "" });
       setIsSubmitted(true);
-
-      if (!btn || !btnText) {
-        return;
+      if (typeof document !== "undefined") {
+        const btn = document.querySelector("#btn");
+        const btnText = document.querySelector("#btnText");
+        if (!btn || !btnText) {
+          return;
+        }
+        btnText.innerHTML = "Thanks";
+        btn.classList.add("active");
       }
-      btnText.innerHTML = "Thanks";
-      btn.classList.add("active");
     } catch (e) {
       if (e instanceof z.ZodError) {
         const fieldErrors: { [key in "name" | "email" | "message"]: boolean } =
