@@ -11,20 +11,19 @@ const Introduction = () => (
       />
     </div>
     <p className="text-md sm:text-xl mb-6">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor
-      <span className="text-purple-400"> incididunt ut labore. </span> et dolore
-      magna aliqua. Ut enim ad minim veniam, quis.
+      I'm a freshly graduated Husky with a passion for building reliable and
+      user-friendly software.
     </p>
     <p className="text-md sm:text-xl mb-6">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor
-      <span className="text-purple-400"> incididunt ut labore. </span>
-      Ut enim ad minim veniam nostrud exercitation ullamco laboris nisi ut.
+      While my expertise spans the full stack, I would say I'm a backend
+      enthusiast at heart. My programming languages of choice are{" "}
+      <span className="text-purple-400">TypeScript, Python, and C++</span> ,
+      although I'm always eager to learn new tools and technologies.
     </p>
     <p className="text-md sm:text-xl">
-      Porem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labo aliquip ex ea commodo consequat.
+      My co-op experience at MCPHS involved Postman and xUnit API testing and
+      database querying, while at Avidyne, I focused on achieving high code
+      coverage through unit testing in C/C++ for avionics systems
     </p>
   </>
 );
