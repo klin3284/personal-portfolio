@@ -23,7 +23,13 @@ const Projects = () => {
       title: "LoRaWAN Rescue Device",
       description:
         "LoRa Device with Texting, SOS, and GPS Features, Streamlined by an iMessage-like iOS App",
-      imageUrl: ["/projects/lora-top.png", "/projects/lora-bottom.png"],
+      imageUrl: [
+        "/projects/chat-screen.png",
+        "/projects/messages-screen.png",
+        "/projects/settings-screen.png",
+        "/projects/lora-top.png",
+        "/projects/lora-bottom.png",
+      ],
     },
     {
       title: "Project 3",
