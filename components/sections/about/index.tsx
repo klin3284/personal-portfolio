@@ -14,9 +14,9 @@ const About = () => (
       <div className="lg:pl-20 text-center lg:text-left">
         <div className="max-w-xs px-5 lg:max-w-none mx-auto lg:mx-0">
           <img
-            src="pfp_cropped.png"
+            src="ice-cream.jpg"
             alt="About Me Headshot"
-            className="object-contain rounded-full border-2 border-blue-400"
+            className="object-cover rounded-full border-2 border-blue-400 aspect-square"
           />
         </div>
       </div>
