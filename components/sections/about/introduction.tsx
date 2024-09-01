@@ -27,7 +27,7 @@ const Introduction = () => (
     <p className="text-md sm:text-xl">
       My co-op experience at MCPHS involved Postman and xUnit API testing and
       database querying, while at Avidyne, I focused on achieving high code
-      coverage through unit testing in C/C++ for avionics systems
+      coverage through unit testing in C/C++ for avionics systems.
     </p>
   </>
 );
