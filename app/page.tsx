@@ -4,6 +4,7 @@ import About from "@components/sections/about";
 import Projects from "@components/sections/projects";
 import Footer from "@components/layout/footer";
 import ScrollToTopButton from "@components/layout/scrollToTopButton";
+import CursorGradient from "@components/layout/cursorGradient";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Contact />
       <Footer />
       <ScrollToTopButton />
+      <CursorGradient />
     </main>
   );
 }
