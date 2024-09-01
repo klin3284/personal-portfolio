@@ -28,12 +28,12 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ slides }) => {
   };
 
   return (
-    <div className="h-full w-full px-12 relative group">
+    <div className="h-full w-full p-4 relative group">
       <div className="relative w-full h-full">
         <img
           src={slides[currentIndex]}
           alt={`Spotlight Image ${currentIndex}`}
-          className="object-contain items-center w-full h-full"
+          className="object-cover w-full h-full"
         />
       </div>
       <div className="slide-left-arrow bg-blue-400 text-white">

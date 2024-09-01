@@ -36,7 +36,7 @@ const SocialBar: React.FC<SocialBarProps> = ({ size, color }) => (
     </div>
     <div className="con-tooltip bottom">
       <a
-        href="public\resume_lin_brk.pdf"
+        href="/resume_lin_brk.pdf"
         target="_blank"
         rel="noopener noreferrer"
         className={`transition-colors duration-200 hover:text-purple-400 ${color}`}

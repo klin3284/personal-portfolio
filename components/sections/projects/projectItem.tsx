@@ -20,7 +20,6 @@ type Language = keyof typeof languageColorMap;
 export interface ProjectItemProps {
   title: string;
   description: string;
-  imageUrl: string;
   externalUrl?: string;
   language?: Language;
 }
@@ -28,13 +27,18 @@ export interface ProjectItemProps {
 const ProjectItem: React.FC<ProjectItemProps> = ({
   title,
   description,
-  imageUrl,
+  externalUrl,
   language,
 }) => (
-  <div className="group bg-transparent rounded-lg shadow-lg overflow-hidden border-2 border-transparent hover:border-blue-400 hover:scale-105 transition-transform duration-300">
+  <a
+    href={externalUrl}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="group bg-transparent rounded-lg shadow-lg overflow-hidden border-2 border-transparent hover:border-orange-500 hover:scale-105 transition-transform duration-300"
+  >
     <div className="flex flex-col justify-between h-full py-8 px-6">
       <div>
-        <h3 className="text-xl font-bold mb-2 group-hover:text-blue-400">
+        <h3 className="text-xl font-bold mb-2 group-hover:text-orange-500">
           {title}
         </h3>
         <p className="text-gray-400 text-md">{description}</p>
@@ -44,14 +48,16 @@ const ProjectItem: React.FC<ProjectItemProps> = ({
           <span className="flex items-center gap-1">
             <span
               className="h-4 w-4 rounded-full"
-              style={{ backgroundColor: languageColorMap[language] || "#ddd" }}
+              style={{
+                backgroundColor: languageColorMap[language] || "#ddd",
+              }}
             ></span>
             {language}
           </span>
         </div>
       )}
     </div>
-  </div>
+  </a>
 );
 
 export default ProjectItem;

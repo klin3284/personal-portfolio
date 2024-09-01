@@ -12,13 +12,17 @@ const Introduction = () => (
     </div>
     <p className="text-md sm:text-xl mb-6">
       I'm a freshly graduated Husky with a passion for building reliable and
-      user-friendly software.
+      user-friendly software. I would say I'm a full stack developer with a
+      slight bias toward backend, but I'm really just a software enthusiast at
+      heart.
     </p>
     <p className="text-md sm:text-xl mb-6">
-      While my expertise spans the full stack, I would say I'm a backend
-      enthusiast at heart. My programming languages of choice are{" "}
-      <span className="text-purple-400">TypeScript, Python, and C++</span> ,
-      although I'm always eager to learn new tools and technologies.
+      I have a passion for building things from scratch such as websites, as
+      well as mobile apps! My programming languages of choice are{" "}
+      <span className="text-purple-400">
+        TypeScript, Swift, Python, and C++
+      </span>
+      , although I'm always eager to learn new tools and technologies.
     </p>
     <p className="text-md sm:text-xl">
       My co-op experience at MCPHS involved Postman and xUnit API testing and

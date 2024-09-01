@@ -8,66 +8,73 @@ import ProjectItem, { ProjectItemProps } from "./projectItem";
 const Projects = () => {
   const spotlightProjectItems: SpotlightProjectItemProps[] = [
     {
-      title: "Project 1",
+      title: "Covey Chronicals",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
-      imageUrl: "aac_logo.png",
+        "Outlet of Recent News Using APIs and Web-Scrapping in Open Source Virtual Meeting Space",
+      imageUrl: [
+        "/projects/town.png",
+        "/projects/outlet.png",
+        "/projects/article.png",
+        "/projects/comments.png",
+        "/projects/inbox.png",
+      ],
     },
     {
-      title: "Project 2",
+      title: "LoRaWAN Rescue Device ",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
-      imageUrl: "aac_logo.png",
+        "LoRa device for texting and GPS sharing with contacts, featuring an iMessage-like app UI.",
+      imageUrl: [],
     },
     {
       title: "Project 3",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
-      imageUrl: "aac_logo.png",
+      imageUrl: [],
     },
   ];
 
   const projectItems: ProjectItemProps[] = [
     {
-      title: "CoveyTown News Outlet",
+      title: "This Website",
       description:
-        "News Outlet of recent news articles using APIs and web-scrapping supporting commenting, likes, and sharing and personal posts to open source virtual meeting space, CoveyTown.",
-      imageUrl: "/aac_logo.png",
+        "Designed and developed a responsive portfolio website using NextJS and Tailwind CSS for a visually appealing interface.",
       language: "TypeScript",
-    },
-    {
-      title: "LoRa Texting Device",
-      description:
-        "Utilized LoRaWAN (Low Power Wide Area Networking) to transmit SMS-like messages as an alternative to Walkie Talkies",
-      imageUrl: "/aac_logo.png",
-      language: "Swift",
+      externalUrl: "https://github.com/klin3284/personal-portfolio",
     },
     {
       title: "Fitness Leaderboard",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac odio quis lectus fringilla condimentum non sed magna. Nam sit amet mi et diam dictum venenatis. ",
-      imageUrl: "",
+        "Fitness competition platform integrating Strava data via REST API, featuring public/private leaderboards and trophy systems. Utilized PostgreSQL for management of user and activity data.",
       language: "TypeScript",
+      externalUrl: "https://github.com/fitness-leaderboard/fitness-leaderboard",
     },
     {
       title: "Fitlink",
       description:
-        "Phasellus auctor iaculis consectetur. Quisque a metus libero. Aliquam ipsum magna, consectetur sed dui egestas, pellentesque efficitur lacus. ",
-      imageUrl: "",
+        "BeReal-Inspired iOS application for sharing fitness progress and workout pictures with friends. Utilized Google Firebase for user authentication and data storage.",
       language: "Swift",
+      externalUrl: "https://github.com/Jaber1028/CS4520FinalProject",
     },
     {
-      title: "This Website!",
-      description: "Integer placerat tellus sed nulla rutrum rhoncus.",
-      imageUrl: "",
-      language: "TypeScript",
+      title: "FUSE Filesystem Driver",
+      description:
+        "FUSE-based filesystem driver that mounts a 1MB disk image, allowing for file creation, manipulation, and directory nesting. The filesystem supports operations on files up to 40K.",
+      language: "C",
+      externalUrl: "https://github.khoury.northeastern.edu/achen17/p2",
+    },
+    {
+      title: "Appetite",
+      description:
+        "Application for finding recipes based on available ingredients, dietary restrictions, and prices based on nearby grocers. Utilized MySQL for data storage.",
+      language: "Java",
+      externalUrl: "https://github.com/klin3284/App-etite",
     },
     {
       title: "Image Processing",
       description:
-        "Nulla faucibus justo nec accumsan commodo. Quisque egestas non libero at pellentesque. Ut viverra arcu tellus, ut lobortis quam semper id.",
-      imageUrl: "",
+        "Image processing application with support for multiple file formats (PPM, JPG, BMP, PNG) and various image operations, featuring both command-line and GUI for usability.",
       language: "Java",
+      externalUrl: "https://github.com/klin3284/ImageProcessing",
     },
   ];
 
@@ -90,12 +97,12 @@ const Projects = () => {
         </header>
       </div>
 
-      <div className="flex flex-col items-center space-y-20 mt-20">
+      <div className="flex flex-col items-center mt-20 lg:mt-12">
         {spotlightProjectItems.map((project, index) => (
           <SpotlightProjectItem key={index} {...project} />
         ))}
       </div>
-      <h2 className="text-3xl font-semibold ml-6 mt-28">
+      <h2 className="text-3xl font-semibold ml-6 mt-14 lg:mt-28">
         List of Honorable Mentions on Github
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 my-6">

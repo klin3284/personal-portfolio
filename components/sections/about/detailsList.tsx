@@ -32,8 +32,8 @@ const DetailsList = () => (
         Welcome to{" "}
         <span className="font-bold text-purple-400">Bamboo Bistro</span>, where
         college dorm meets five-star dining. Need proof? I once prepared
-        Thanksgiving dinner for my entire dorm floor (12 people) using nothing
-        but dorm kitchen wizardry.
+        Thanksgiving dinner for my dorm floor using nothing but dorm kitchen
+        wizardry.
       </li>
     </ul>
   </>

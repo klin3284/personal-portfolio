@@ -88,7 +88,7 @@ const Contact = () => {
   return (
     <div
       id="contactMe"
-      className="flex flex-col rounded-2xl border-2 border-gray-600 pt-8 pb-4 px-12"
+      className="flex flex-col rounded-2xl border-2 border-gray-600 pt-8 pb-4 px-12 mt-20"
     >
       <div className="flex flex-row gap-2 items-start mb-1">
         <Icon name="Mail" size={26} />
