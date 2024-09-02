@@ -10,7 +10,7 @@ const Hero = () => (
     />
 
     <div className="flex flex-col items-center md:items-start gap-2">
-      <h1 className="font-bold text-4xl sm:text-5xl md:text-6xl relative md:mb-2">
+      <h1 className="font-bold text-3xl sm:text-4xl lg:text-6xl relative md:mb-2">
         Hi, I&apos;m <span className="text-blue-400">Kenny Lin!</span>
       </h1>
       <h2 className="font-bold text-xl sm:text-2xl">

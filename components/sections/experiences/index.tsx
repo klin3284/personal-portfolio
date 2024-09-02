@@ -6,7 +6,7 @@ import ExperienceItem, { ExperienceItemProps } from "./experienceItem";
 const Experiences = () => {
   const jobs: ExperienceItemProps[] = [
     {
-      company: "Avidyne Corporation",
+      company: "Avidyne",
       title: "Software Engineer",
       startDate: new Date("07-01-2022"),
       endDate: new Date("12-18-2022"),
@@ -20,7 +20,7 @@ const Experiences = () => {
       logo: "/companyLogos/mcphs_logo_circle.png",
     },
     {
-      company: "Asian American Center - Northeastern",
+      company: "Asian American Center",
       title: "Intern",
       startDate: new Date("09-02-2021"),
       endDate: new Date("05-06-2024"),

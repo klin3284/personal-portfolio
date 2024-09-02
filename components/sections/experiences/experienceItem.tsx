@@ -21,22 +21,22 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({
   };
 
   return (
-    <div className="relative flex flex-row my-4 gap-6">
+    <div className="relative flex flex-row my-4 gap-4 md:gap-6">
       <div className="flex items-center justify-center">
         <img
           src={logo}
           alt={company}
-          className="w-12 h-12 md:w-16 md:h-16 rounded-full border-2 border-blue-400 object-cover"
+          className="w-16 h-16 rounded-full border-2 border-blue-400 object-cover"
         />
       </div>
       <div className="flex-1">
-        <div className="bg-gray-700 rounded-xl px-2 py-1 inline-block mb-2">
+        <div className="bg-gray-700 rounded-xl px-2 py-1 inline-block mb-1 md:mb-2">
           <p className="text-xs font-bold text-white">
             {startDate.toLocaleDateString(undefined, dateOptions)} -{" "}
             {endDate.toLocaleDateString(undefined, dateOptions)}
           </p>
         </div>
-        <h3 className="text-md font-bold text-blue-400">
+        <h3 className="text-sm md:text-base font-bold text-blue-400">
           {company.toUpperCase()}
         </h3>
         <p className="text-sm">{title}</p>

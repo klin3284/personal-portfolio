@@ -108,7 +108,7 @@ const Projects = () => {
           <SpotlightProjectItem key={index} {...project} />
         ))}
       </div>
-      <h2 className="text-3xl font-semibold ml-6 mt-14 lg:mt-28">
+      <h2 className="text-3xl md:text-3xl font-semibold ml-6 mt-14 lg:mt-28">
         List of Honorable Mentions on Github
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 my-6">

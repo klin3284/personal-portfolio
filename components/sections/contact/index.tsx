@@ -4,6 +4,7 @@ import { contactSchema } from "@schemas/contact";
 import { z } from "zod";
 import React, { useState } from "react";
 import TextField from "@mui/material/TextField";
+import useMediaQuery from "@mui/material/useMediaQuery";
 import { ThemeProvider } from "@mui/material/styles";
 import theme from "@styles/themeProvider";
 import Icon from "../../icons/index";
@@ -21,6 +22,8 @@ const Contact = () => {
     email: false,
     message: false,
   });
+
+  const isSmallScreen = useMediaQuery("(max-width: 767px)");
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
@@ -88,19 +91,21 @@ const Contact = () => {
   return (
     <div
       id="contactMe"
-      className="flex flex-col rounded-2xl border-2 border-gray-600 pt-8 pb-4 px-12 mt-20"
+      className="flex flex-col rounded-2xl border-2 border-gray-600 pt-4 pb-4 px-6 lg:pt-8 lg:px-12 mt-20"
     >
-      <div className="flex flex-row gap-2 items-start mb-1">
+      <div className="flex gap-2 items-start mb-1">
         <Icon name="Mail" size={26} />
-        <h2 className="font-semibold text-xl">Get in touch with me!</h2>
+        <h2 className="font-semibold text-lg md:text-xl">
+          Get in touch with me!
+        </h2>
       </div>
-      <p className="text-gray-400 mb-6 text-lg">
+      <p className="text-gray-400 mb-6 text-base md:text-lg">
         If you have any questions or just want to say hi, feel free to send me a
         message!
       </p>
       <ThemeProvider theme={theme}>
         <div className="flex w-full flex-col items-center">
-          <div className="flex w-full gap-4">
+          <div className="flex flex-col lg:flex-row w-full gap-4">
             <TextField
               id="name"
               label="Name"
@@ -108,6 +113,7 @@ const Contact = () => {
               value={formData.name}
               onChange={handleChange}
               error={errors.name}
+              size={isSmallScreen ? "small" : "medium"}
               className="flex-1"
             />
             <TextField
@@ -117,6 +123,7 @@ const Contact = () => {
               value={formData.email}
               onChange={handleChange}
               error={errors.email}
+              size={isSmallScreen ? "small" : "medium"}
               className="flex-1"
             />
           </div>
@@ -130,11 +137,17 @@ const Contact = () => {
               value={formData.message}
               onChange={handleChange}
               error={errors.message}
+              size={isSmallScreen ? "small" : "medium"}
               className="w-full"
             />
           </div>
-          <div className="flex flex-row mt-4 w-full">
-            <p className="text-gray-400 italic text-sm">Powered by ResendApi</p>
+          <div className="flex flex-row mt-4 w-full items-center">
+            <p className="text-xs md:text-sm text-gray-400 italic hidden md:block">
+              Powered by ResendApi
+            </p>
+            <p className="text-xs md:text-sm text-gray-400 italic block md:hidden">
+              ResendApi
+            </p>
             <button
               id="btn"
               className="submit-button ml-auto"
@@ -150,7 +163,6 @@ const Contact = () => {
                       strokeWidth: 8,
                       stroke: "#fff",
                       strokeDasharray: 34,
-                      strokeDashoffset: 34,
                       strokeLinecap: "round",
                     }}
                   />

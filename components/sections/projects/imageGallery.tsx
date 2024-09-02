@@ -33,7 +33,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ slides }) => {
         <img
           src={slides[currentIndex]}
           alt={`Spotlight Image ${currentIndex}`}
-          className="object-cover w-full h-full"
+          className="object-cover w-full h-full pb-4"
         />
       </div>
       <div className="slide-left-arrow bg-blue-400 text-white">

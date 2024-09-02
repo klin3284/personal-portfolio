@@ -33,18 +33,20 @@ const About = () => (
         <DetailsList />
       </div>
 
-      <div id="experiences" className="lg:pl-20 mt-8">
+      <div id="experiences" className="lg:pl-20 lg:mt-8">
         <div className="flex flex-col items-start border-2 border-gray-600 rounded-2xl p-6">
           <div className="flex flex-row gap-4 items-center mb-2">
             <Icon name="Briefcase" size={28} />
-            <h3 className="text-2xl font-semibold text-gray-200">Work</h3>
+            <h3 className="text-xl md:text-2xl font-semibold text-gray-200">
+              Work
+            </h3>
           </div>
           <Experiences />
           <div className="flex justify-center w-full mt-4">
             <ScrollToSectionButton
               sectionId="contactMe"
               label="Contact Me"
-              className="bg-gray-700 text-white py-4 px-4 w-11/12 max-w-md rounded-lg"
+              className="bg-gray-700 text-white py-3 md:py-4 md:px-4 w-10/12 max-w-md rounded-xl"
             />
           </div>
         </div>

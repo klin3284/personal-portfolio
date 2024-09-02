@@ -19,7 +19,7 @@ body {
     rgba(13, 118, 255, 0.16) 5%,
     rgba(13, 118, 255, 0.14) 10%,
     rgba(13, 118, 255, 0.12) 15%,
-    rgba(13, 118, 255, 0.10) 20%,
+    rgba(13, 118, 255, 0.1) 20%,
     rgba(13, 118, 255, 0.08) 25%,
     rgba(13, 118, 255, 0.05) 30%,
     rgba(13, 118, 255, 0.03) 35%,
@@ -299,14 +299,14 @@ body {
 }
 
 .submit-button {
-  width: 150px;
-  height: 40px;
+  width: 120px;
+  height: 30px;
   border: none;
   outline: none;
   background: #2f2f2f;
   color: #fff;
-  font-size: 18px;
-  border-radius: 40px;
+  font-size: 15px;
+  border-radius: 30px;
   align-items: center;
   text-align: center;
   box-shadow: 0 6px 20px -5px rgba(0, 0, 0, 0.4);
@@ -316,19 +316,19 @@ body {
 }
 
 .check-box {
-  width: 40px;
-  height: 40px;
-  border-radius: 20px;
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
   box-shadow: 0 0 12px -2px rgba(0, 0, 0, 0.5);
   position: absolute;
   top: 0;
-  right: -20px;
+  right: -15px;
   opacity: 0;
 }
 
 .check-box svg {
-  width: 20px;
-  margin: 10px;
+  width: 15px;
+  margin: 7.5px;
 }
 
 .active {
@@ -343,7 +343,7 @@ body {
 }
 
 .active p {
-  margin-right: 50px;
+  margin-right: 40px;
   transition: 1s;
 }
 
@@ -351,4 +351,24 @@ body {
   stroke-dashoffset: 0;
   transition: 1s;
   transition-delay: 1s;
+}
+
+@media (min-width: 1280px) {
+  .submit-button {
+    width: 150px;
+    height: 40px;
+    font-size: 18px;
+    border-radius: 40px;
+  }
+
+  .check-box {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    right: -20px;
+  }
+
+  .check-box svg {
+    width: 20px;
+  }
 }
