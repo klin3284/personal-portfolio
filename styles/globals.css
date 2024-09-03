@@ -41,6 +41,31 @@ body {
   z-index: -500;
 }
 
+.link {
+  font-weight: 500;
+  font-size: 0.975rem;
+  color: #f97316;
+  text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  .link {
+    font-size: 1.125rem;
+  }
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.list {
+  margin-bottom: 1.5rem;
+}
+
+.listItem {
+  margin-bottom: 0.75rem;
+}
+
 .con-tooltip {
   position: relative;
   display: inline-block;
