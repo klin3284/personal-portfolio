@@ -31,12 +31,6 @@ const Projects = () => {
         "/projects/lora-bottom.png",
       ],
     },
-    {
-      title: "Project 3",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
-      imageUrl: [],
-    },
   ];
 
   const projectItems: ProjectItemProps[] = [

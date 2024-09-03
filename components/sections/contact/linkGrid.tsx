@@ -50,13 +50,18 @@ const LinkGrid = () => (
           </a>
         </li>
         <li className="listItem">
-          <a href="credits" className="link">
-            Credits
+          <a
+            href="/resume_lin_brk.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="link"
+          >
+            Resume
           </a>
         </li>
         <li className="listItem">
-          <a href="licenses" className="link">
-            Licenses
+          <a href="credits" className="link">
+            Credits
           </a>
         </li>
       </ul>
@@ -65,7 +70,7 @@ const LinkGrid = () => (
       <h3 className="font-bold text-md sm:text-lg mb-6">EXTRA</h3>
       <ul className="list">
         <li className="listItem">
-          <a href="food" className="link">
+          <a href="bamboo" className="link">
             Food Blog
           </a>
         </li>
