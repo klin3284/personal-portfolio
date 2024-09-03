@@ -9,7 +9,7 @@ import DetailsList from "./detailsList";
 import Introduction from "./introduction";
 
 const About = () => (
-  <Section id="about" title="About Me">
+  <Section id="about">
     <div className="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12 my-20">
       <div className="lg:pl-20 text-center lg:text-left">
         <div className="max-w-xs px-5 lg:max-w-none mx-auto lg:mx-0">

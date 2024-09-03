@@ -85,7 +85,7 @@ const Projects = () => {
   ];
 
   return (
-    <Section id="projects" title="Work I'm Proud Of">
+    <Section id="projects">
       <div className="flex flex-col gap-4 mt-20">
         <header className="max-w-4xl">
           <div>
