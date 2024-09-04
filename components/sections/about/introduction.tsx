@@ -2,7 +2,7 @@ import React from "react";
 
 const Introduction = () => (
   <>
-    <div className="flex flex-row gap-5 mb-8 items-center">
+    <div className="flex flex-row gap-5 mb-4 md:mb-8 items-center">
       <h2 className="text-4xl font-bold sm:text-6xl">Hey There!</h2>
       <img
         src="./lucky_cat.gif"

@@ -10,13 +10,13 @@ import Introduction from "./introduction";
 
 const About = () => (
   <Section id="about">
-    <div className="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12 my-20">
+    <div className="grid grid-cols-1 gap-y-10 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12 my-20">
       <div className="lg:pl-20 text-center lg:text-left">
         <div className="max-w-xs px-5 lg:max-w-none mx-auto lg:mx-0">
           <img
             src="ice-cream.jpg"
             alt="About Me Headshot"
-            className="object-cover rounded-full border-2 border-blue-400 aspect-square"
+            className="object-cover rounded-full w-full border-2 border-blue-400 aspect-square"
           />
         </div>
       </div>
