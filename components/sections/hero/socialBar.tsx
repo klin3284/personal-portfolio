@@ -49,7 +49,7 @@ const SocialBar: React.FC<SocialBarProps> = ({ size, color }) => (
     </div>
     <div className="con-tooltip bottom">
       <a
-        href=""
+        href="/menu_04-24-24.pdf"
         target="_blank"
         rel="noopener noreferrer"
         className={`transition-colors duration-200 hover:text-purple-400 ${color}`}
