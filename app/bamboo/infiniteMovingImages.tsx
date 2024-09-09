@@ -1,17 +1,21 @@
 "use client";
 
-import cn from "@utils/cn";
 import React, { useEffect, useState } from "react";
-import Icon from "../icons";
+import { ClassValue, clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
 
-const InfiniteMovingIcons = ({
-  items,
+function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs));
+}
+
+const InfiniteMovingImages = ({
+  images,
   direction = "left",
   speed = "fast",
   pauseOnHover = true,
   className,
 }: {
-  items: string[];
+  images: string[];
   direction?: "left" | "right";
   speed?: "fast" | "normal" | "slow";
   pauseOnHover?: boolean;
@@ -84,16 +88,20 @@ const InfiniteMovingIcons = ({
           pauseOnHover && "hover:[animation-play-state:paused]",
         )}
       >
-        {items.map((item, idx) => (
+        {images.map((src, idx) => (
           <li
-            className="relative rounded-2xl flex-shrink-0 px-8 py-6"
+            className="relative rounded-2xl flex-shrink-0 p-4"
             style={{
               background:
                 "linear-gradient(180deg, var(--slate-800), var(--slate-900)",
             }}
-            key={item}
+            key={idx}
           >
-            <Icon name={item} size={50} />
+            <img
+              src={src}
+              alt={`${src}-food-blog`}
+              className="rounded-2xl max-w-80 h-full aspect-square"
+            />
           </li>
         ))}
       </ul>
@@ -101,4 +109,4 @@ const InfiniteMovingIcons = ({
   );
 };
 
-export default InfiniteMovingIcons;
+export default InfiniteMovingImages;
