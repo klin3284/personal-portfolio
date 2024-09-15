@@ -20,6 +20,7 @@ import {
   SiJavascript,
   SiTypescript,
 } from "react-icons/si";
+import { TiArrowBack } from "react-icons/ti";
 import { GiBamboo } from "react-icons/gi";
 import { IoBriefcaseOutline } from "react-icons/io5";
 import { MdMailOutline } from "react-icons/md";
@@ -71,6 +72,8 @@ const Icon: React.FC<IconProps> = ({ name, size }) => {
       return <FaArrowUp size={size} />;
     case "Briefcase":
       return <IoBriefcaseOutline size={size} />;
+    case "BackArrow":
+      return <TiArrowBack size={size} />;
     default:
       return <div />;
   }
