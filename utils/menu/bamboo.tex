@@ -1,0 +1,86 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\rhead{\textbf{\textit{April 24, 2024}}}
+
+\geometry{a4paper, margin=1in}
+\graphicspath{ {images/} }
+
+% Fix the headheight warning
+\setlength{\headheight}{14.5pt}
+
+\newcommand{\menuItem}[2]{
+  \vspace{3em}
+  \noindent\textbf{\Large #1}\\
+  \normalsize #2\par
+}
+
+\begin{document}
+
+\begin{center}
+\begin{tabular}{@{}c@{\hskip 0.1cm}c@{}}
+\begin{minipage}{0.23\textwidth}
+\raggedleft
+{\Huge\textbf{Bamboo}}\\[0.15cm]
+{\Huge\textbf{Bistro}}
+\end{minipage}
+&
+\begin{minipage}{0.12\textwidth}
+\centering
+\includegraphics[width=1.5cm]{bamboo_graphic.png}
+\end{minipage}
+\end{tabular}
+
+\end{center}
+
+\vspace{0.25cm}
+
+\noindent\small\textit{Our menu features a harmonious mix of Japanese and Cantonese influences, crafted with the freshest ingredients sourced from the finest fisherman. Tonight's course features fresh (frozen) Black Cod sourced from the local fancy Whole Foods, known for its premium quality. Our Dungeness crab, picked from C-Mart, truly captures the essence of classic Cantonese flavors.}
+
+\vspace{1em}
+
+\menuItem{Okonomiyaki Pancake}{A savory Japanese pancake loaded with cabbage, tempura flakes, and scallions. Topped with okonomiyaki sauce.}
+
+\menuItem{Dungeness Crab Steamed Sticky Rice}{Fresh and locally sourced Dungeness crab stir-fried with garlic, ginger, and scallions. Steamed with glutinous rice.}
+
+\menuItem{Kenbu Miso Glazed Cod}{Tender cod fillets marinated in a blend of white miso paste, mirin, and sugar. Grilled until perfectly caramelized.}
+
+\menuItem{Garlic Pea Shoots}{Fresh pea shoots stir-fried with garlic and a touch of soy sauce.}
+
+\vspace{2cm}
+
+\vfill
+
+\begin{center}
+\rule{\textwidth}{0.4pt}
+
+\begin{center}
+\normalsize \textbf{Chef de Cuisine Kenny Lin}
+\end{center}
+
+\small{
+We are an exclusive, invite-only dining experience. We cook to appreciate our friends and share the joy of good company. When invited, prepare for an evening of innovative cuisine and warm hospitality. At Bamboo Bistro, friendship is our secret ingredient.
+}
+
+\vspace{0.5cm}
+
+\footnotesize
+© 2024 Bamboo Bistro
+
+\vspace{0.5em}
+\begin{tabular}{ccc}
+\href{https://asianamericancenter.northeastern.edu/}{About Us} &
+\href{./}{Menu} &
+\href{https://linkedin.com/in/kennylin24/}{Contact}
+\end{tabular}
+\end{center}
+
+\end{document}
