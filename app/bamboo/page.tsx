@@ -125,13 +125,13 @@ const Bamboo: React.FC = () => {
                     <span className="font-medium text-md">Recent Menu</span>
                   </button>
                 </a>
-                <button className="flex items-center gap-2 px-4 py-2 bg-orange-500 text-white rounded-lg">
+                <div className="flex items-center gap-2 px-4 py-2 bg-orange-500 text-white rounded-lg">
                   <Icon name="Mail" size={20} />
                   <ScrollToSectionButton
                     sectionId="contactMe"
                     label="Contact Me"
                   />
-                </button>
+                </div>
               </div>
             </div>
           </div>
@@ -140,7 +140,7 @@ const Bamboo: React.FC = () => {
             <img src="./cutlery-line.png" alt="Cutlery Divider" />
           </div>
           {isLoading ? (
-            <div className="flex flex-row w-full items-center gap-10 p-4">
+            <div className="flex flex-row w-full h-40 lg:h-2xl items-start gap-10 p-4">
               <Skeleton
                 variant="rectangular"
                 width={320}

@@ -76,14 +76,14 @@ const InfiniteMovingImages = ({
     <div
       ref={containerRef}
       className={cn(
-        "scroller relative z-20 max-w-7xl overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
+        "scroller relative z-20 max-w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
         className,
       )}
     >
       <ul
         ref={scrollerRef}
         className={cn(
-          "flex min-w-full shrink-0 gap-4 py-4 w-max flex-nowrap",
+          "flex min-w-full shrink-0 gap-4 xl:py-4 w-max flex-nowrap",
           start && "animate-scroll ",
           pauseOnHover && "hover:[animation-play-state:paused]",
         )}
@@ -100,7 +100,7 @@ const InfiniteMovingImages = ({
             <img
               src={src}
               alt={`${src}-food-blog`}
-              className="rounded-2xl max-w-80 h-full aspect-square"
+              className="rounded-2xl w-60 xl:w-80 aspect-square"
             />
           </li>
         ))}
