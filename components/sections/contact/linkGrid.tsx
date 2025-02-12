@@ -51,7 +51,7 @@ const LinkGrid = () => (
         </li>
         <li className="listItem">
           <a
-            href="/resume_lin_brk.pdf"
+            href="/Kenny_Lin_Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="link"
