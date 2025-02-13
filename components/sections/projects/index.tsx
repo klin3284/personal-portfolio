@@ -8,6 +8,30 @@ import ProjectItem, { ProjectItemProps } from "./projectItem";
 const Projects = () => {
   const spotlightProjectItems: SpotlightProjectItemProps[] = [
     {
+      title: "Fantasy RPG",
+      description:
+        "Unleash Spells and Combat Monsters as a Wizard in an Open World RPG powered by Unity",
+      imageUrl: [
+        "/projects/frpg_1.png",
+        "/projects/frpg_2.png",
+        "/projects/frpg_3.png",
+        "/projects/frpg_4.png",
+      ],
+      url: "https://github.com/eslang50/UnityRPG",
+    },
+    {
+      title: "Finance Tracker",
+      description:
+        "Secure Personal Financing Tool with Transaction Logging and Smart Budgeting Insights.",
+      imageUrl: [
+        "/projects/main_menu.png",
+        "/projects/sign_in.png",
+        "/projects/dashboard.png",
+        "/projects/analytics.png",
+      ],
+      url: "https://github.com/klin3284/financial-tracker",
+    },
+    {
       title: "Covey Chronicals",
       description:
         "Outlet of Recent News Using APIs and Web-Scrapping in Open Source Virtual Meeting Space",
@@ -18,22 +42,18 @@ const Projects = () => {
         "/projects/comments.png",
         "/projects/inbox.png",
       ],
-    },
-    {
-      title: "LoRaWAN Rescue Device",
-      description:
-        "LoRa Device with Texting, SOS, and GPS Features, Streamlined by an iMessage-like iOS App",
-      imageUrl: [
-        "/projects/chat-screen.png",
-        "/projects/messages-screen.png",
-        "/projects/settings-screen.png",
-        "/projects/lora-top.png",
-        "/projects/lora-bottom.png",
-      ],
+      url: "https://github.com/neu-cs4530/spring24-project-team-302",
     },
   ];
 
   const projectItems: ProjectItemProps[] = [
+    {
+      title: "LoRaWAN Rescue Device",
+      description:
+        "A long-range, low-power communication device enabling off-grid texting, SOS signaling, and GPS tracking.",
+      language: "Swift",
+      externalUrl: "https://github.com/klin3284/Lorawan",
+    },
     {
       title: "This Website",
       description:
@@ -70,11 +90,25 @@ const Projects = () => {
       externalUrl: "https://github.com/klin3284/App-etite",
     },
     {
+      title: "Dance Dance Revolution",
+      description:
+        "Rhythm game inspired by Dance Dance Revolution, where players score points by matching buttons to falling shapes on an Intel FPGA board.",
+      language: "C++",
+      externalUrl: "https://github.com/klin3284/Eng_Algo",
+    },
+    {
       title: "Image Processing",
       description:
         "Image processing application with support for multiple file formats (PPM, JPG, BMP, PNG) and various image operations, featuring both command-line and GUI for usability.",
       language: "Java",
       externalUrl: "https://github.com/klin3284/ImageProcessing",
+    },
+    {
+      title: "Marble Solitaire",
+      description:
+        "A console-based implementation of Marble Solitaire featuring English, European, and Triangle board variations. Built with a model-view-controller architecture to handle game logic, user input, and text-based rendering.",
+      language: "Java",
+      externalUrl: "https://github.com/klin3284/MarbleSolitaire",
     },
   ];
 
