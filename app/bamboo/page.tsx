@@ -30,9 +30,9 @@ const Bamboo: React.FC = () => (
         </button>
         <div className="flex flex-row gap-0 sm:gap-5 items-center mb-10 sm:mb-15">
           <div className="flex flex-col items-center">
-            <h2 className="text-3xl font-bold sm:text-5xl">
+            <h1 className="text-3xl font-bold sm:text-5xl">
               Welcome to Bamboo Bistro
-            </h2>
+            </h1>
             <h4 className="text-sm sm:text-xl font-semibold text-blue-400">
               A student-run dining experience at Northeastern University
             </h4>

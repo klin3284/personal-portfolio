@@ -16,7 +16,7 @@ const Credits: React.FC = () => (
           <Icon name="Home" size={45} />
         </button>
         <div className="flex flex-col items-center">
-          <h2 className="text-3xl font-bold sm:text-5xl">Credits</h2>
+          <h1 className="text-3xl font-bold sm:text-5xl">Credits</h1>
           <h4 className="text-sm sm:text-xl font-semibold text-blue-400">
             Here are the resources I used to build it.
           </h4>
