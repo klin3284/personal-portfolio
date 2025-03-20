@@ -21,9 +21,17 @@ const ScrollToSectionButton: React.FC<ScrollToSectionButtonProps> = ({
     }
   };
 
+  const handleClick = () => {
+    if (window.location.pathname !== "/") {
+      window.location.href = `/#${sectionId}`;
+    } else {
+      scrollToSection();
+    }
+  };
+
   return (
     <button
-      onClick={scrollToSection}
+      onClick={handleClick}
       className={className} // Apply custom class names
     >
       {label}

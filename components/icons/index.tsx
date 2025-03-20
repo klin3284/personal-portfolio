@@ -5,6 +5,7 @@ import {
   FaFileAlt,
   FaClipboard,
   FaArrowUp,
+  FaHome,
 } from "react-icons/fa";
 import {
   SiExpress,
@@ -74,6 +75,8 @@ const Icon: React.FC<IconProps> = ({ name, size }) => {
       return <IoBriefcaseOutline size={size} />;
     case "BackArrow":
       return <TiArrowBack size={size} />;
+    case "Home":
+      return <FaHome size={size} />;
     default:
       return <div />;
   }

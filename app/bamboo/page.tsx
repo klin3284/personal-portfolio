@@ -21,10 +21,12 @@ const Bamboo: React.FC = () => (
     <div id="bamboo-bistro" className="mx-auto max-w-7xl lg:px-6 w-full">
       <div className="relative flex flex-col items-center my-14">
         <button
-          onClick={() => window.history.back()}
+          onClick={() => {
+            window.location.href = "/";
+          }}
           className="sm:block hidden absolute left-0"
         >
-          <Icon name="BackArrow" size={45} />
+          <Icon name="Home" size={45} />
         </button>
         <div className="flex flex-row gap-0 sm:gap-5 items-center mb-10 sm:mb-15">
           <div className="flex flex-col items-center">

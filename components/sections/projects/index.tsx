@@ -113,38 +113,41 @@ const Projects = () => {
   ];
 
   return (
-    <Section id="projects">
-      <div className="flex flex-col gap-4 mt-20">
-        <header className="max-w-4xl">
-          <div>
-            <h1 className="text-4xl font-bold sm:text-5xl">
-              A Peek into My Software Engineering Adventures
-            </h1>
-            <p className="mt-6 text-gray-400">
-              Over the years, I've had the opportunity to work on a variety of
-              software projects. These are the ones that I'm most proud of
-              showcasing in my portfolio. Many of these projects are
-              open-source, so feel free to explore the code and contribute if
-              you have any ideas for enhancements or improvements.
-            </p>
-          </div>
-        </header>
-      </div>
-
-      <div className="flex flex-col items-center mt-20 lg:mt-12">
-        {spotlightProjectItems.map((project, index) => (
-          <SpotlightProjectItem key={index} {...project} />
-        ))}
-      </div>
-      <h2 className="text-3xl md:text-3xl font-semibold ml-6 mt-14 lg:mt-28">
-        List of Honorable Mentions on Github
-      </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 my-6">
-        {projectItems.map((project, index) => (
-          <ProjectItem key={index} {...project} />
-        ))}
-      </div>
-    </Section>
+    <div>
+      <Section id="projects">
+        <div className="flex flex-col gap-4 mt-20">
+          <header className="max-w-4xl">
+            <div>
+              <h2 className="text-4xl font-bold sm:text-5xl">
+                A Peek into My Software Engineering Adventures
+              </h2>
+              <p className="mt-6 text-gray-400">
+                Over the years, I've had the opportunity to work on a variety of
+                software projects. These are the ones that I'm most proud of
+                showcasing in my portfolio. Many of these projects are
+                open-source, so feel free to explore the code and contribute if
+                you have any ideas for enhancements or improvements.
+              </p>
+            </div>
+          </header>
+        </div>
+        <div className="flex flex-col items-center mt-20 lg:mt-12">
+          {spotlightProjectItems.map((project, index) => (
+            <SpotlightProjectItem key={index} {...project} />
+          ))}
+        </div>
+      </Section>
+      <Section id="blogs">
+        <h2 className="text-3xl md:text-3xl font-semibold ml-6 mt-14 lg:mt-28">
+          List of Honorable Mentions on Github
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 my-6">
+          {projectItems.map((project, index) => (
+            <ProjectItem key={index} {...project} />
+          ))}
+        </div>
+      </Section>
+    </div>
   );
 };
 

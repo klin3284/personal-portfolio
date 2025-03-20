@@ -29,7 +29,7 @@ const LinkGrid = () => (
         </li>
         <li className="listItem">
           <ScrollToSectionButton
-            sectionId="blog"
+            sectionId="blogs"
             label="Blog"
             className="link"
           />
