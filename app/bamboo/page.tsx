@@ -6,14 +6,11 @@ import ScrollToSectionButton from "@components/layout/scrollToSectionButton";
 import InfiniteMovingImages from "./infiniteMovingImages";
 
 const FOOD_IMAGES = [
+  "/foods/03-11-25.jpeg",
   "/foods/bb-04-24-24.jpeg",
   "/foods/braised-beef-summer-squash.jpg",
-  "/foods/curry-katsu.jpeg",
   "/foods/curry-udon.jpeg",
   "/foods/dorm-dinner-22.JPG",
-  "/foods/july04-prime-rib.JPG",
-  "/foods/pizza.jpeg",
-  "/foods/steak-spaghetti.jpeg",
 ];
 
 const Bamboo: React.FC = () => (
