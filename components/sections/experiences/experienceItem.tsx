@@ -36,9 +36,9 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({
             {endDate.toLocaleDateString(undefined, dateOptions)}
           </p>
         </div>
-        <h3 className="text-sm md:text-base font-bold text-blue-400">
+        <h4 className="text-sm md:text-base font-bold text-blue-400">
           {company.toUpperCase()}
-        </h3>
+        </h4>
         <p className="text-sm">{title}</p>
       </div>
     </div>

@@ -38,9 +38,9 @@ const ProjectItem: React.FC<ProjectItemProps> = ({
   >
     <div className="flex flex-col justify-between h-full py-8 px-6">
       <div>
-        <h3 className="text-xl font-bold mb-2 group-hover:text-orange-500">
+        <h5 className="text-xl font-bold mb-2 group-hover:text-orange-500">
           {title}
-        </h3>
+        </h5>
         <p className="text-gray-400 text-md">{description}</p>
       </div>
       {language && (

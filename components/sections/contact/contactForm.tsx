@@ -95,9 +95,9 @@ const ContactForm = () => {
     >
       <div className="flex gap-2 items-start mb-1">
         <Icon name="Mail" size={26} />
-        <h2 className="font-semibold text-lg md:text-xl">
+        <h3 className="font-semibold text-lg md:text-xl">
           Get in touch with me!
-        </h2>
+        </h3>
       </div>
       <p className="text-gray-400 mb-6 text-base lg:text-lg">
         If you have any questions or just want to say hi, feel free to send me a
