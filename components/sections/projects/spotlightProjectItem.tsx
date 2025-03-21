@@ -21,9 +21,11 @@ const SpotlightProjectItem: React.FC<SpotlightProjectItemProps> = ({
     <div className="text-details">
       <div>
         <a href={url} target="_blank" rel="noopener noreferrer">
-          <h4 className="font-bold text-blue-400 text-2xl md:text-4xl relative mb-2 lg:mb-4">
-            {title}
-          </h4>
+          <div className="mb-2 lg:mb-4">
+            <p className="font-bold text-blue-400 text-2xl md:text-4xl relative">
+              {title}
+            </p>
+          </div>
         </a>
         <p className="font-bold text-base md:text-xl xl:text-2xl">
           {description}

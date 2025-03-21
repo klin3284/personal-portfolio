@@ -4,7 +4,7 @@ import ScrollToSectionButton from "@components/layout/scrollToSectionButton";
 const LinkGrid = () => (
   <div className="grid grid-cols-3 gap-4 w-full">
     <div className="flex flex-col">
-      <h6 className="font-bold text-md sm:text-lg mb-6">GENERAL</h6>
+      <p className="font-bold text-md sm:text-lg mb-6">GENERAL</p>
       <ul className="list">
         <li className="listItem">
           <ScrollToSectionButton
@@ -37,7 +37,7 @@ const LinkGrid = () => (
       </ul>
     </div>
     <div className="flex flex-col">
-      <h6 className="font-bold text-md sm:text-lg mb-6">SPECIFICS</h6>
+      <p className="font-bold text-md sm:text-lg mb-6">SPECIFICS</p>
       <ul className="list">
         <li className="listItem">
           <a href="https://github.com/klin3284" className="link">
@@ -67,7 +67,7 @@ const LinkGrid = () => (
       </ul>
     </div>
     <div className="flex flex-col">
-      <h6 className="font-bold text-md sm:text-lg mb-6">EXTRA</h6>
+      <p className="font-bold text-md sm:text-lg mb-6">EXTRA</p>
       <ul className="list">
         <li className="listItem">
           <a href="bamboo" className="link">
