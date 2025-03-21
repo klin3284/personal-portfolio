@@ -1,4 +1,5 @@
 import { Montserrat } from "next/font/google";
+import Head from "next/head";
 import "@styles/globals.css";
 import { Analytics } from "@vercel/analytics/react";
 import Footer from "@components/layout/footer";
@@ -41,9 +42,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
+      <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      </head>
+      </Head>
       <body className={montserrat.className}>
         <Analytics />
         {children}
