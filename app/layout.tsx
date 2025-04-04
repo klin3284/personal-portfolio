@@ -1,5 +1,4 @@
 import { Montserrat } from "next/font/google";
-import Head from "next/head";
 import "@styles/globals.css";
 import { Analytics } from "@vercel/analytics/react";
 import Footer from "@components/layout/footer";
@@ -33,6 +32,9 @@ export const metadata = {
   },
   authors: [{ name: "Kenny Lin" }],
   creator: "Kenny Lin",
+  verification: {
+    google: "vu3hGMVma5wy4OOVnQMkXiVhaXvbeEwwAWdRYo7pKrE",
+  },
 };
 
 export default function RootLayout({
@@ -42,13 +44,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta
-          name="google-site-verification"
-          content="vu3hGMVma5wy4OOVnQMkXiVhaXvbeEwwAWdRYo7pKrE"
-        />
-      </Head>
       <body className={montserrat.className}>
         <Analytics />
         {children}
