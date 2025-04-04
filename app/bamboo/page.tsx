@@ -6,6 +6,7 @@ import ScrollToSectionButton from "@components/layout/scrollToSectionButton";
 import InfiniteMovingImages from "./infiniteMovingImages";
 
 const FOOD_IMAGES = [
+  "/foods/03_29_25.jpg",
   "/foods/03-11-25.jpeg",
   "/foods/bb-04-24-24.jpeg",
   "/foods/braised-beef-summer-squash.jpg",

@@ -44,6 +44,10 @@ export default function RootLayout({
     <html lang="en">
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+          name="google-site-verification"
+          content="vu3hGMVma5wy4OOVnQMkXiVhaXvbeEwwAWdRYo7pKrE"
+        />
       </Head>
       <body className={montserrat.className}>
         <Analytics />
