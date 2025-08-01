@@ -7,11 +7,14 @@ import InfiniteMovingImages from "./infiniteMovingImages";
 
 const FOOD_IMAGES = [
   "/foods/03_29_25.jpg",
-  "/foods/03-11-25.jpeg",
+  "/foods/kyoto.jpg",
+  "/foods/chirashi.jpg",
   "/foods/bb-04-24-24.jpeg",
   "/foods/braised-beef-summer-squash.jpg",
-  "/foods/curry-udon.jpeg",
   "/foods/dorm-dinner-22.JPG",
+  "/foods/elote.jpg",
+  "/foods/03-11-25.jpeg",
+  "/foods/mornay-tteok.jpg",
 ];
 
 const Bamboo: React.FC = () => (
